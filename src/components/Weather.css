@@ -1,0 +1,106 @@
+/* Apply a background image to the entire page and set background color */
+body {
+  background-color: #6a0dad; /* Purple color */
+  background-image: url('../assets/bg.png'); /* Correct path relative to CSS file */
+  background-size: cover; /* Ensure the background image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating of the background image */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Optional: Set a default font for better appearance */
+}
+
+/* Container for the title text */
+.title {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: bold;
+  z-index: 10; /* Ensure it appears above other content */
+  font-family: 'Arial', sans-serif; /* Matching the font family for consistency */
+}
+
+.weather {
+  place-self: center;
+  padding: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2); /* Slightly white background with transparency */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the weather container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px; /* Ensure minimum width to avoid shrinking */
+}
+
+.search-bar {
+  position: relative; /* Set position relative to contain the absolutely positioned icon */
+  width: 100%;
+  max-width: 500px; /* Optional: Set a maximum width for better control */
+}
+
+.search-bar input {
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding-left: 50px; /* Adjust padding to make space for the icon */
+  color: #626262;
+  background: #ebfffc; /* Background color of the input field */
+  font-size: 18px;
+  width: 100%; /* Ensure the input takes the full width of the search-bar */
+}
+
+.search-bar img {
+  position: absolute; /* Position the icon absolutely within the search-bar */
+  left: 15px; /* Position the icon from the left edge */
+  top: 50%; /* Vertically center the icon */
+  transform: translateY(-50%); /* Center the icon vertically */
+  width: 24px; /* Adjust the size of the icon to fit */
+  height: 24px; /* Maintain aspect ratio */
+  background: #ebfffc; /* Ensure the background matches the input field */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.weather-icon {
+  width: 150px;
+  margin: 30px 0;
+}
+
+.temperature {
+  color: #fff;
+  font-size: 80px;
+  line-height: 1; /* Ensure proper line-height */
+}
+
+.location {
+  color: #fff;
+  font-size: 40px;
+}
+
+.weather-data {
+  width: 100%;
+  margin-top: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-data .col {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 22px;
+}
+
+.weather-data .col span {
+  display: block;
+  font-size: 16px;
+}
+
+.weather-data .col img {
+  width: 26px;
+  margin-top: 10px;
+}
